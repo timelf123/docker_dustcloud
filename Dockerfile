@@ -1,4 +1,5 @@
-FROM alpine
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 RUN apk update \
     # only for build miio
