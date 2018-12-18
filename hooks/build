@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "------ HOOK START - BUILD -------"
+# printenv
+# https://docs.docker.com/docker-cloud/builds/advanced/
+docker build --build-arg BUILD_FROM=$BUILD_FROM --build-arg branch=$BRANCH -t $IMAGE_NAME .
+
+echo "------ HOOK END - BUILD -------"
